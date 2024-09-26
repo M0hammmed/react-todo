@@ -1,15 +1,31 @@
 import React, { useState } from "react";
 
-function ListComponent({ name, deleteTodo}) {
-const [edit,setEdit]=useState(false)
+function ListComponent({ todoData, name, deleteTodo, index, setTodoData }) {
+  const [edit, setEdit] = useState(false);
+  const [editInput, setEditInput] = useState(name);
+  const todoedit = (i) => {
+    setEdit(!edit);
+    let value2 = [...todoData];
+    value2[i] = editInput;
+    setTodoData(value2);
+  };
+
   return (
     <div className="task">
-      {edit == true ? <input type="text" />:<div>{name}</div>}
+      {edit == true ? (
+        <input
+          type="text"
+          value={editInput}
+          onChange={(event) => setEditInput(event.target.value)}
+        />
+      ) : (
+        <div>{name}</div>
+      )}
       <div>
-        <button onClick={() => setEdit(!edit)} value="edit">
-         {edit ?'update':'edit'}
-         </button>
-        <button onClick={() => deleteTodo(name)} value="delete">
+        <button onClick={() => todoedit(index)} value="edit">
+          {edit ? "update" : "edit"}
+        </button>
+        <button onClick={() => deleteTodo(index)} value="delete">
           Delete
         </button>
       </div>

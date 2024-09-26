@@ -1,19 +1,21 @@
-input{
+input {
   height: 40px;
   margin-top: 20px;
   border-radius: 10px;
   width: 400px;
+  font-style: italic;
 }
-button{
+button {
   height: 40px;
   border-radius: 10px;
-  background-color: yellow ;
+  background-color: yellow;
   color: black;
   margin-left: 5px;
   width: 70px;
+  font-style: italic;
 
 }
-.todo{
+.todo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,8 +23,8 @@ button{
   padding: 10px;
   height: 100vh;
 }
-.task{
-  border:10px;
+.task {
+  border: 10px;
   border-color: black;
   border-radius: 10px;
   background-color: white;
@@ -33,6 +35,3 @@ button{
   align-items: center;
   padding: 5px;
 }
-
-
-
