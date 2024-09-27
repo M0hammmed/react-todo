@@ -10,6 +10,8 @@ function ListComponent({ todoData, name, deleteTodo, index, setTodoData }) {
     setTodoData(value2);
   };
 
+  
+
   return (
     <div className="task">
       {edit == true ? (

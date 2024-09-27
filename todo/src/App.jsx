@@ -20,6 +20,8 @@ function App() {
     updatedTodo.splice(index, 1);
     setTodoData(updatedTodo);
     window.alert("Deleted.....!");
+
+    // setEdit('');
   };
 
   // function deleteTodo(name) {
